@@ -1,0 +1,58 @@
+<app-taches></app-taches>
+<header>
+    <h6><label for="menu"><span class="fa fa-bars"></span></label><span class="accueil">Companies</span></h6>
+    <div class="d-flex">
+        <button class="btn btn-success  mx-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Company</button>
+        <button class="btn btn-success  mx-2" routerLink="/dashboard">Home</button>
+    </div>
+</header>
+<body>
+    
+    <div class="container">
+        <table class="table mt-3">
+            <thead>
+                <tr>
+                    <th scope="col">Id Company</th>
+                    <th scope="col">Company Name</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of compagnies">
+                    <td>{{c.idCompany}}</td>
+                    <td>{{c.companyName}}</td>
+                    <td>
+                        <button class="btn btn-info">Edit</button>
+                        <button class="btn btn-danger mx-3" (click)="OnDelectCompany(c.companyName)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+      
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Compagnies</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form [formGroup]="formValue">
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Company Name</label>
+                          <input type="text" formControlName="companyName" class="form-control" id="exampleInputPassword1">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" (click)="postCompany()" class="btn btn-primary">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+

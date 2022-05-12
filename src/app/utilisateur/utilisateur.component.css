@@ -1,0 +1,42 @@
+header{
+    background-color: #008ea1;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    box-shadow: 2px 5px 15px 2px rgb(0 0 0 / 10%);
+    position: relative;
+    left: 22%;
+    width: calc(100% - 22%);
+    top: 0rem;
+    z-index: 100;
+    transition: left 300ms;
+  }
+  
+  
+  .accueil{
+    font-size: large;
+    padding-right: 1rem;
+    margin-left: 15px;
+    color: aliceblue;
+  }
+
+.container{
+    margin-top: 5%;
+    left: 20%;
+    position: fixed
+}
+
+.table{
+    background: #fff;
+    justify-content: space-between;
+    padding: 2rem; 
+    width: 95%;
+    border-radius: 10px;
+    box-shadow: 2px 5px 10px 2px rgb(0 0 0 / 10%);
+}
+
+.navbar{
+    background-color: #008ea1;
+    left: 20%;
+    width: 80%;
+}

@@ -1,0 +1,29 @@
+<app-taches></app-taches>
+<header>
+    <h6><label for="menu"><span class="fa fa-bars"></span></label><span class="accueil">Users</span></h6>
+    <div class="d-flex">
+        <button class="btn btn-success  mx-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Company</button>
+        <button class="btn btn-success  mx-2" routerLink="/dashboard">Home</button>
+    </div>
+</header>
+
+<div class="container">
+    <table class="table mt-3">
+        <thead>
+            <tr>
+                <th scope="col">Username</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let u of users">
+                <td>{{u.username}}</td>
+                <td>{{u.firstName}}</td>
+                <td>{{u.lastName}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+  

@@ -1,0 +1,46 @@
+<nav class="navbar">
+    <div class="container-fluid">
+        <h1 style="color: aliceblue;">Project Manager</h1>
+    </div>
+</nav>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<img class="wave" src="assets/images/wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="assets/images/fnd.svg">
+		</div>
+		<div class="login-content">
+			<form [formGroup]="loginForm" (ngSubmit)="login()">
+				<img src="assets/images/avatar.svg">
+				<h2 class="title">Welcome</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-envelope"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<input formControlName="email" type="email" class="form-control" placeholder="Email" id="exampleInputEmail1" aria-describedby="emailHelp">
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<input formControlName="password" type="password" class="form-control" placeholder="Password" id="exampleInputPassword1">
+            	   </div>
+            	</div>
+            	<input type="submit" class="btn" value="Login">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

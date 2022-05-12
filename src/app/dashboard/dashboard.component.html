@@ -1,0 +1,143 @@
+<app-taches></app-taches>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <div class="content">
+    
+    <header>
+      <h6><label for="menu"><span class="fa fa-bars"></span></label><span class="accueil">Home</span></h6>
+
+      <div class="search-wrapper">
+        <span class="fa fa-search"></span>
+        <input type="search" name="" placeholder="recherche" />
+      </div>
+
+      <div class="user-wrapper" id="dropdown">
+        <div>
+          <h4>Account</h4>
+          <small>Admin</small>
+        </div>
+        
+        <a width="30" height="30" class="fa fa-user"></a>
+        <div class="dropdown-content">
+        <p routerLink="/login" class="btn btn-danger">LogOut</p>
+        </div>
+        
+      </div>
+    </header>
+
+    <main>
+      <div class="cards">
+        <div class="card-single">
+          <div>
+            <h2>{{projectsSize}}</h2>
+            <small>Companies</small>
+          </div>
+          <div>
+            <span class="fa fa-th-large"></span>
+          </div>
+        </div>
+
+        <div class="card-single">
+          <div>
+            <h2>{{projectsSize}}</h2>
+            <small>Projects</small>
+          </div>
+          <div>
+            <span class="fa fa-clipboard"></span>
+          </div>
+        </div>
+        <div class="card-single">
+          <div>
+            <h2>{{tasksSize}}</h2>
+            <small>Tasks</small>
+          </div>
+          <div>
+            <span class="fa fa-tasks"></span>
+          </div>
+        </div>
+        <div class="card-single">
+          <div>
+            <h2>{{usersSize}}</h2>
+            <small>Utilisateurs</small>
+          </div>
+          <div>
+            <span class="fa fa-group"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="composant">
+        <div class="ventes">
+          <div class="case">
+            <div class="header-case">
+              <h2>Recent tasks</h2>
+              <button routerLink="/task" class="button">voir plus<span class="fa fa-arrow-right"></span></button>
+            </div>
+            <div class="body-case">
+              <div class="tableau">
+                <table width="100%">
+                  <thead>
+                    <tr>
+                        <th scope="col">Id TaskLog</th>
+                        <th scope="col">Task Description</th>
+                        <th scope="col">taskLog Date</th>
+                        <th scope="col">task Minutes</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let t of taskLogs">
+                        <td>{{t.idTaskLog}}</td>
+                        <td>{{t.taskDescription}}</td>
+                        <td>{{t.taskLogDate}}</td>
+                        <td>{{t.taskMinutes}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="statistique">
+          
+          <div class="statistique-barre bar1"></div>
+          <div class="statistique-barre bar2"></div>
+          <div class="statistique-barre bar3"></div>
+          <div class="statistique-barre bar4"></div>
+          <div class="statistique-barre bar5"></div>
+          <div class="statistique-barre bar6"></div>
+          <div class="statistique-barre bar5"></div>
+          <div class="statistique-barre bar6"></div>
+          <div class="statistique-barre bar5"></div>
+          <div class="statistique-barre bar6"></div>
+          <div class="statistique-barre bar4"></div>
+          <div class="statistique-barre bar5"></div>
+          <div class="statistique-barre bar6"></div>
+      </div>
+        <div class="legende">
+          <h4>Legende</h4>
+          <table>
+            <tr>
+              <td><span class="evolution color-one"></span>Task</td>
+            </tr>
+            <tr>
+              <td><span class="evolution color-two"></span>Project</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
+
